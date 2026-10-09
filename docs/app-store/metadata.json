@@ -1,0 +1,27 @@
+{
+  "name": "Brighter: XDR Brightness",
+  "bundle_id": "com.developcu.brighter",
+  "apple_id": "6820998550",
+  "sku": "brighter-macos-1",
+  "version": "1.0.0",
+  "build": "2",
+  "price": "Free",
+  "category": "Utilities",
+  "support_url": "https://brighter-support.pages.dev/",
+  "privacy_url": "https://brighter-support.pages.dev/privacy/",
+  "copyright": "2026 Yasin Demir",
+  "en-US": {
+    "subtitle": "HDR boost for built-in XDR",
+    "promotional_text": "Control HDR brightness from your menu bar. Requires a compatible built-in XDR display and macOS 14 or later.",
+    "keywords": "hdr,brightness,xdr,display,screen,menu bar,macbook,boost,light",
+    "description": "Brighter is a small menu bar utility that uses your Mac’s available HDR display headroom to increase desktop brightness.\n\nIMPORTANT: Requires macOS 14 or later, Apple silicon, and a compatible built-in XDR display, such as the Liquid Retina XDR display on a 14-inch or 16-inch MacBook Pro. Brighter boosts only the built-in display. External displays and SDR-only displays are not supported. Having an M1 processor alone does not guarantee display compatibility.\n\nSIMPLE CONTROLS\n• Enable or disable HDR boost with one switch.\n• Adjust the compositing factor with a slider.\n• Turn boost off or quit to return to normal brightness.\n• Restore an enabled boost after your Mac wakes from sleep.\n• Use the app in English or Turkish.\n\nLOCAL AND PRIVATE\nNo account, advertising, subscriptions, analytics or tracking. Brighter processes display capabilities locally and does not collect your personal data or record your screen. No Accessibility or Screen Recording permission is required.\n\nThe slider shows the HDR compositing factor, not a guaranteed increase in measured nits. Actual brightness depends on your display, system brightness, available HDR headroom, power and temperature. macOS continues to manage the panel’s limits. Brighter starts with boost off each time it launches."
+  },
+  "tr": {
+    "name": "Brighter: XDR Parlaklık",
+    "subtitle": "Yerleşik XDR için HDR artışı",
+    "promotional_text": "HDR parlaklığını menü çubuğundan ayarlayın. Uyumlu yerleşik XDR ekran ve macOS 14 veya üzeri gerekir.",
+    "keywords": "hdr,parlaklık,xdr,ekran,macbook,menü,artış,ışık",
+    "description": "Brighter, Mac’inizin kullanılabilir HDR ekran alanını kullanarak masaüstü parlaklığını artıran küçük bir menü çubuğu uygulamasıdır.\n\nÖNEMLİ: macOS 14 veya üzeri, Apple silicon işlemci ve uyumlu yerleşik XDR ekran gerekir. Apple silicon işlemcili 14 veya 16 inç MacBook Pro’nun Liquid Retina XDR ekranı desteklenen ekranlara örnektir. Brighter yalnızca yerleşik ekranı aydınlatır. Harici ekranlar ve yalnızca SDR destekleyen ekranlar desteklenmez. Tek başına M1 işlemciye sahip olmak ekran uyumluluğunu garanti etmez.\n\nBASİT KONTROLLER\n• HDR artışını tek anahtarla açın veya kapatın.\n• Birleştirme çarpanını kaydırıcıyla ayarlayın.\n• Anahtarı kapatarak veya uygulamadan çıkarak normal parlaklığa dönün.\n• Mac uykudan uyandığında o oturumda açtığınız artışı geri yükleyin.\n• Türkçe veya İngilizce kullanın.\n\nYEREL VE GİZLİ\nHesap, reklam, abonelik, analiz veya takip sistemi yoktur. Ekran özellikleri Mac’inizde işlenir. Brighter kişisel veri toplamaz veya ekranınızı kaydetmez. Erişilebilirlik veya Ekran Kaydı izni gerektirmez.\n\nKaydırıcı HDR birleştirme çarpanını gösterir; ölçülen nit değerinde belirli bir artışı garanti etmez. Gerçek parlaklık ekranınıza, sistem parlaklığına, kullanılabilir HDR alanına, güç ve sıcaklık koşullarına bağlıdır. Ekran panelinin sınırlarını macOS yönetmeye devam eder. Brighter her açılışta HDR artışı kapalı olarak başlar."
+  },
+  "review_notes": "Brighter is a native macOS menu bar utility. No login is required.\n\nHardware required for functional testing: an Apple silicon 14-inch or 16-inch MacBook Pro with its built-in Liquid Retina XDR display, running macOS 14 or later. An SDR display or an external display will show an unsupported status; this is expected.\n\nLaunch the app, then click the sun icon in the menu bar. Enable “Boost HDR brightness” and adjust the Boost slider. Wait at least 5 seconds to confirm stable brightness. Disable the switch or quit to remove the overlay. The app starts disabled on each launch.\n\nImplementation: a mouse-transparent, borderless AppKit overlay with an rgba16Float MTKView, CAMetalLayer.wantsExtendedDynamicRangeContent and the \"multiply\" compositor preset assigned to CALayer.compositingFilter. This is a public property, but Apple does not document the \"multiply\" preset name. We disclose this explicitly for your assessment; the app does not access CAFilter classes or use dynamic/private symbol lookup. Core Image compositing was tested as an alternative but did not produce the required desktop brightness effect on the test device. No screen capture, Accessibility access, private display controls, root privileges, background service or sandbox exceptions are used. Display headroom is read through NSScreen. The overlay exits when the app quits.\n\nThe factor is clamped to reported potential EDR headroom with an upper limit of 4; it is not a claim of fixed nit output or a way to bypass thermal limits. The app is sandboxed with no network or file access entitlements. It collects no user data."
+}

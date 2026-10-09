@@ -1,0 +1,18 @@
+.build/
+dist/
+Resources/Brighter.iconset/
+.DS_Store
+.playwright-mcp/
+xcuserdata/
+*.xcuserstate
+.env
+.env.*
+*.p8
+*.p12
+*.mobileprovision
+*.provisionprofile
+
+# Local account/support history, not project documentation.
+docs/apple-notary-*.md
+docs/app-store/release.md
+docs/plans/
